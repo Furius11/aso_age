@@ -1,0 +1,23 @@
+Vagrant.configure("2") do |config|
+  config.vm.define "Web server" do |webserver|
+  config.vm.box = "generic/ubuntu2204"
+  config.vm.hostname = "Web-AGE"
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "3072"
+    vb.cpus = 2
+  end
+  config.vm.network "private_network", ip: "172.16.0.10"
+  config.vm.network "public_network", ip: "10.99.0.10"
+  config.vm.provision "shell", inline: <<-SHELL
+  sudo apt-get update
+    sudo apt-get install -y apache2
+    sudo systemctl enable apache2
+    sudo mkdir -p /var/www/html/sitio
+    echo "<html><body><h1>Página 1</h1></body></html>" > /var/www/html/sitio/pagina1.html
+    echo "<html><body><h1>Página 2</h1></body></html>" > /var/www/html/sitio/pagina2.html
+    echo "<html><body><h1>Página 3</h1><img src='imagen.webp'></body></html>" > /var/www/html/sitio/pagina3.html
+    sudo chown -R www-data:www-data /var/www/html/sitio
+    sudo systemctl restart apache2
+  SHELL
+  end
+end
