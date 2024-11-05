@@ -12,3 +12,8 @@
 - [PR0202: Conexión remota con SSH](./ut02/pr0202/pr0202.md)
 - [PR0203: Configuración de SSH para varios usuarios](./ut02/pr0203/pr0203.md)
 - [PR0204: Programación de tareas con cron](./ut02/pr0204/pr0204.md)
+
+## UT03: SCRIPTS
+
+- [PR0301:Condicional if ](./ut03/pr0301/pr0301.md)
+- [PR0302:Comando case](./ut03/pr0302/pr0302.md)

@@ -1,0 +1,153 @@
+# PR0302: Comando case
+## Realiza las siguientes tareas:
+
+- Ejercicio 1: Menú de operaciones matemáticas
+Crea un script que muestre un menú con opciones para sumar, restar, multiplicar y dividir dos números. Debe pedir primero un operando, luego el otro y finalmente la operación a realizar. Usa case para realizar la operación seleccionada por el usuario.
+
+#!/bin/bash
+echo "Menu"
+echo "1) Sumar"
+echo "2) Restar"
+echo "3) Multiplicar"
+echo "4) Dividir"
+echo "5) Salir"
+echo
+
+read -p "primer numero": num1
+read -p "segundo numero": num2
+read -p  "elige una de las opciones": 
+
+case $opcion in 
+1)
+        resultado=$((num1 + num2))
+        echo "$resultado"
+        ;;
+2)
+        resultado=$((num1 - num2))
+        echo "$resultado"
+        ;;
+3)
+        resultado=$((num1 * num2))
+        echo "$resultado"
+4)
+        resultado=$((num1 / num2))
+        echo "$resultado"
+        ;;
+5)
+
+        ;;
+esac
+
+- Ejercicio 2: Verificar días de la semana
+Haz un script que lea un día de la semana como entrada y responda si es un día laboral o de fin de semana.
+
+read -p "Ingresa un día de la semana:" dia
+
+dia=$(echo "$dia" | tr '[:upper:]' '[:lower:]')
+
+case "$dia" in
+    lunes|martes|miércoles|jueves|viernes)
+        echo "laboral"
+        ;;
+    sábado|domingo)
+        echo "$dia fin de semana."
+        ;;
+    *)
+        echo "Entrada no válida"
+        ;;
+esac
+
+- Ejercicio 3: Clasificar calificaciones
+Crea un script que reciba una calificación numérica del 0 al 10 e indique la nota correspondiente: sobresaliente (9 o 10), notable (7 u 8), bien (6), suficiente (5) o suspenso (0 a 4).
+
+#!/bin/bash
+echo "Ingrese la calificación (0-10):"
+read calificacion
+
+case $calificacion in
+  9|10) echo "Sobresaliente" ;;
+  7|8) echo "Notable" ;;
+  6) echo "Bien" ;;
+  5) echo "Suficiente" ;;
+  0|1|2|3|4) echo "Suspenso" ;;
+  *) echo "No válida" ;;
+esac
+
+
+- Ejercicio 4: Determinar la estación del año
+El usuario ingresa un mes del año, y el script responde con la estación correspondiente (primavera, verano, otoño o invierno).
+
+#!/bin/bash
+echo "Ingrese un mes del año:"
+read mes
+
+case $mes in
+  diciembre|enero|febrero) echo "Es invierno" ;;
+  marzo|abril|mayo) echo "Es primavera" ;;
+  junio|julio|agosto) echo "Es verano" ;;
+  septiembre|octubre|noviembre) echo "Es otoño" ;;
+  *) echo "No válido" ;;
+esac
+
+
+- Ejercicio 5: Identificar el tipo de archivo
+Pide al usuario que ingrese la extensión de un archivo (.txt, .jpg, .pdf, etc.), y usa case para mostrar el tipo de archivo (texto, imagen, documento, etc.).
+
+#!/bin/bash
+echo "Ingrese la extensión del archivo (por ejemplo, .txt):"
+read extension
+
+case $extension in
+  .txt) echo "Archivo de texto" ;;
+  .jpg|.png|.gif) echo "Archivo de imagen" ;;
+  .pdf) echo "Documento PDF" ;;
+  .sh) echo "Archivo de script" ;;
+  *) echo "Extensión desconocida" ;;
+esac
+
+
+- Ejercicio 6: Convertir temperaturas
+Haz un script que convierta una temperatura ingresada por el usuario de Celsius a Fahrenheit, de Fahrenheit a Celsius o de Celsius a Kelvin, usando case para seleccionar la conversión deseada.
+
+La fórmula para realizar las conversiones es:
+
+Grados Fahrenheit = Grados Celsius * 1.8 + 32
+Grados Celsius = ( Grados Fahrenheit - 32) / 1.8
+- Ejercicio 7: Estado del servicio
+Escribe un script que reciba el nombre de un servicio (por ejemplo, “apache” o “mysql”) y, usando case, muestre opciones para iniciar, detener o reiniciar el servicio.
+
+#!/bin/bash
+echo "Ingrese la temperatura:"
+read temp
+echo "Seleccione la conversión: "
+echo "1) Celsius a Fahrenheit"
+echo "2) Fahrenheit a Celsius"
+echo "3) Celsius a Kelvin"
+read conversion
+
+case $conversion in
+  1) echo "Resultado: $(echo "$temp * 1.8 + 32" | bc)" ;;
+  2) echo "Resultado: $(echo "($temp - 32) / 1.8" | bc)" ;;
+  3) echo "Resultado: $(echo "$temp + 273.15" | bc)" ;;
+  *) echo "Opción no válida" ;;
+esac
+
+
+- Ejercicio 8: Conversión de unidades de longitud
+Desarrolla un script que permita al usuario convertir metros a kilómetros, metros a centímetros, o metros a milímetros, utilizando case para manejar cada opción de conversión.
+
+#!/bin/bash
+echo "Ingrese la longitud en metros:"
+read metros
+echo "Seleccione la conversión:"
+echo "1) Metros a kilómetros"
+echo "2) Metros a centímetros"
+echo "3) Metros a milímetros"
+read opcion
+
+case $opcion in
+  1) echo "Resultado: $(echo "$metros / 1000" | bc) km" ;;
+  2) echo "Resultado: $(echo "$metros * 100" | bc) cm" ;;
+  3) echo "Resultado: $(echo "$metros * 1000" | bc) mm" ;;
+  *) echo "No válida" ;;
+esac
