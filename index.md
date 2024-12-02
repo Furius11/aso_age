@@ -15,5 +15,13 @@
 
 ## UT03: SCRIPTS
 
-- [PR0301:Condicional if ](./ut03/pr0301/pr0301.md)
-- [PR0302:Comando case](./ut03/pr0302/pr0302.md)
+- [PR0301: Ejercicios con el comando if](./ut03/pr0301/pr0301.md)
+- [PR0302: Ejercicios con case](./ut03/pr0302/pr0302.md)
+- [PR0303: Ejercicios de bucles y condicionales](./ut03/pr0303/pr0303.md)
+- [PR0304: Ejercicios de entrada y salida](./ut03/pr0304/pr0304.md)
+
+## UT04: Instalación y puesta en marcha de Windows Server
+
+- [PR0401: Introducción a Powershell (I) ](./ut04/pr0401/pr0401.md)
+- [PR0402: Introducción a Powershell (II) ](./ut04/pr0402/pr0402.md)
+- [PR0403: Pipeline en Powershell ](./ut04/pr0403/pr0403.md)
