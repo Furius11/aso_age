@@ -26,5 +26,10 @@
 - [PR0402: Introducción a Powershell (II) ](./ut04/pr0402/pr0402.md)
 - [PR0403: Pipeline en Powershell ](./ut04/pr0403/pr0403.md)
 
+## UT05: SERVICIO DE DIRECTORIO EN WINDOWS
+
+- [PR0501:Carpetas personales y compartidas por un grupo](./ut05/pr0501/pr0501.md)
+- [PR0502: Aplicación de directivas](./ut05/pr0502/pr0502.md)
+
 ## Proyecto de la 1ª Evaluación
 - [Análisis de redes (I) ](./proyecto_ev1.md)
