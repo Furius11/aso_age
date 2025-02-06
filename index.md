@@ -28,7 +28,7 @@
 
 ## UT05: SERVICIO DE DIRECTORIO EN WINDOWS
 
-- [PR0501:Carpetas personales y compartidas por un grupo](./ut05/pr0501/pr501.md)
+- [PR0501:Carpetas personales y compartidas por un grupo](./ut05/pr501/pr501.md)
 - [PR0502: Aplicación de directivas](./ut05/pr0502/pr0502.md)
 
 ## Proyecto de la 1ª Evaluación
