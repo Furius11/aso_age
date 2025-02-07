@@ -33,3 +33,6 @@
 
 ## Proyecto de la 1ª Evaluación
 - [Análisis de redes (I) ](./proyecto_ev1.md)
+
+## Proyecto de la 2ª Evaluación
+- [Planificación de un Dominio para un Centro Educativo (II) ](./proyecto_ev2.md)
